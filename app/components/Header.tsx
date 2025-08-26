@@ -29,7 +29,29 @@ export default function Header() {
       </div>
 
       {/* Right side */}
-      <div style={{ color: "black" }}>About Page</div>
+      <div style={{ marginLeft: "auto", display: "flex", gap: "1rem" }}>
+        <a
+          href="/"
+          style={{
+            color: "black",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          Home
+        </a>
+        <a
+          href="/about"
+          style={{
+            color: "black",
+            textDecoration: "none",
+            fontWeight: "bold",
+          }}
+        >
+          About
+        </a>
+      </div>
+
     </header>
   );
 }
