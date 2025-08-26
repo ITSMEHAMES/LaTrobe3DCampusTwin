@@ -1,12 +1,11 @@
-import Header from "./components/Header"
-import styles from "./page.module.css";
+import Header from "./components/Header";
+import MapSwitcher from "./components/MapSwitcher";
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      < Header/>
-
-        
+    <div>
+      <Header />
+      <MapSwitcher />
     </div>
   );
 }

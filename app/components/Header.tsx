@@ -3,7 +3,7 @@ export default function Header() {
     <header
       style={{
         padding: "1rem",
-        background: "#F5F5F5",
+        background: "#e22333", // La Trobe red
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -16,15 +16,15 @@ export default function Header() {
     >
       {/* Left side: Logo + Title */}
       <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <img src="/Images/LaTrobeLogo.png" alt="Logo" width={60} height={60} />
+        <img src="/Images/LaTrobeLogo.png" alt="Logo" width={120} height={60} />
         <h1
           style={{
             margin: 0,
             font: "bold 24px/1.2 Arial, Helvetica, sans-serif",
-            color: "#E4002B", // La Trobe red
+            color: "#white",
           }}
         >
-          La Trobe Digital Twin
+          La Trobe 3D Campus Viewer
         </h1>
       </div>
 
