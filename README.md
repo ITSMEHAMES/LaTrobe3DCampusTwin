@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+This is the Latrobe 3D Campus Digital Twin summary and installation read me file.
 
-## Getting Started
+Project Summary:
+The La Trobe 3D Campus Digital Twin is a virtual representation of La Trobe University’s Bundoora campus. The project extends an existing prototype into a more interactive and immersive platform, accessible via web browser and VR headsets. Users can explore the campus through a 2D bird’s-eye map with clickable markers that display detailed 3D building models and related information. The platform is designed with modern web technologies (React, Node.js, Three.js/Fiber, GSAP) and aims to provide a professional, realistic, and scalable digital experience of the campus.
 
-First, run the development server:
 
-```bash
+Instructions on how to run the project:
+
+Follow these steps to set up the project locally on your machine.
+
+1. Download the project from GitHub
+git clone https://github.com/MitchBow/CWA-Assignment-1
+
+
+Then move into the project folder:
+
+cd CWA-Assignment-1
+
+2. Open in Visual Studio Code
+
+Open the project in Visual Studio Code:
+
+code .
+
+3. Install Dependencies
+
+Run the following command to install all required dependencies:
+
+npm install
+
+4. Start the Development Server
+
+Start the project with:
+
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+5. View in Browser
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The terminal will show a local development URL (usually http://localhost:3000) or the Network link.
+Open it in your browser to view the project running.
