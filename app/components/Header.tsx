@@ -1,17 +1,9 @@
-type HeaderProps = {
-  title?: string;
-  leftSide?: string;
-};
-
-export default function Header({
-  title = "La Trobe Digital Twin",
-  leftSide = "left Area",
-}: HeaderProps) {
+export default function Header() {
   return (
     <header
       style={{
         padding: "1rem",
-        background: "grey",
+        background: "#F5F5F5",
         display: "flex",
         justifyContent: "space-between",
         alignItems: "center",
@@ -22,22 +14,22 @@ export default function Header({
         zIndex: 1000,
       }}
     >
-      {/* Left side: Student info */}
-      <div>{leftSide}</div>
-
-      {/* Centered title */}
-      <div
-        style={{
-          position: "absolute",
-          left: "50%",
-          transform: "translateX(-50%)",
-          pointerEvents: "none",
-        }}
-      >
-        <h1 id="title" style={{ margin: 0 }}>
-          {title}
+      {/* Left side: Logo + Title */}
+      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
+        <img src="/Images/LaTrobeLogo.png" alt="Logo" width={60} height={60} />
+        <h1
+          style={{
+            margin: 0,
+            font: "bold 24px/1.2 Arial, Helvetica, sans-serif",
+            color: "#E4002B", // La Trobe red
+          }}
+        >
+          La Trobe Digital Twin
         </h1>
       </div>
+
+      {/* Right side */}
+      <div style={{ color: "black" }}>About Page</div>
     </header>
   );
 }
