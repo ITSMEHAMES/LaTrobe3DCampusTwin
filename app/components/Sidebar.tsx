@@ -1,14 +1,16 @@
 "use client";
 
 import React from "react";
+import { PointOfInterest } from "./Map";
 
 interface SidebarProps {
   swapMap: () => void;
   currentMapIndex: number;
   totalMaps: number;
+  selectedPOI?: PointOfInterest | null;
 }
 
-const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps }) => {
+const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps, selectedPOI }) => {
   return (
     <aside
       style={{
@@ -57,6 +59,13 @@ const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps }
           <li>• Green dot: Parking</li>
         </ul>
       </div>
+
+      {selectedPOI && (
+        <div style={{ marginTop: "1rem" }}>
+          <h3 style={{ margin: 0 }}>{selectedPOI.label}</h3>
+          <p>{selectedPOI.info}</p>
+        </div>
+      )}
     </aside>
   );
 };
