@@ -2,13 +2,9 @@
 
 import React, { useState } from "react";
 import Map, { PointOfInterest } from "./Map";
+import Sidebar from "./Sidebar";
 
-interface MapData {
-  image: string;
-  points: PointOfInterest[];
-}
-
-const maps: MapData[] = [
+const maps: { image: string; points: PointOfInterest[] }[] = [
   {
     image: "/images/internet/2014_0006_005.jpg",
     points: [
@@ -32,29 +28,28 @@ const maps: MapData[] = [
   },
 ];
 
-const MapSwitcher = () => {
+const MapSwitcher: React.FC = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   const swapMap = () => setCurrentIndex((prev) => (prev + 1) % maps.length);
 
   return (
-    <div
-      style={{
-        position: "fixed",
-        top: 80,   // below header
-        left: 0,   // dock to left
-      }}
-    >
-      <Map
-        mapImage={maps[currentIndex].image}
-        pointsOfInterest={maps[currentIndex].points}
-        width={1200}   // set your desired width
-        height={600}  // set your desired height
+    <>
+      <div style={{ flex: 1, position: "relative" }}>
+        <Map
+          mapImage={maps[currentIndex].image}
+          pointsOfInterest={maps[currentIndex].points}
+          width="100%"
+          height="100%"
+        />
+      </div>
+
+      <Sidebar
+        currentMapIndex={currentIndex}
+        totalMaps={maps.length}
+        swapMap={swapMap}
       />
-      <button onClick={swapMap} style={{ marginTop: "0.5rem" }}>
-        Swap Map
-      </button>
-    </div>
+    </>
   );
 };
 

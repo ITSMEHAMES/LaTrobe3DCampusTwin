@@ -13,12 +13,12 @@ const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps }
     <aside
       style={{
         position: "fixed",
-        top: 80, 
+        top: 80,
         right: 0,
         width: "240px",
         height: "calc(100vh - 80px)",
-        background: "#111", 
-        color: "#fff",    
+        background: "#111",
+        color: "#fff",
         borderLeft: "2px solid #e22333",
         padding: "1rem",
         display: "flex",
@@ -29,7 +29,7 @@ const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps }
       }}
     >
       <h2 style={{ margin: 0, fontSize: "18px", color: "#e22333" }}>Interactive Tour</h2>
-      
+
       <p style={{ margin: "0.5rem 0" }}>
         Map {currentMapIndex + 1} of {totalMaps}
       </p>
@@ -56,7 +56,6 @@ const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps }
           <li>• Blue dot: Facility</li>
           <li>• Green dot: Parking</li>
         </ul>
-        
       </div>
     </aside>
   );
