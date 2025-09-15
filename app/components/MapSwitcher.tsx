@@ -12,14 +12,21 @@ const maps: { image: string; points: PointOfInterest[] }[] = [
       { x: 50, y: 50, label: "POI 2", info: "This is POI 2 info" },
     ],
   },
-  {
-    image: "/images/internet/2014_0006_099.jpg",
+    {
+    image: "/images/2012/LTU_Media_11448.jpg",
     points: [
-      { x: 10, y: 40, label: "POI A", info: "Info about POI A" },
-      { x: 60, y: 70, label: "Info about POI B", info: "POI B info here" },
+      { x: 30, y: 20, label: "POI X", info: "POI X info" },
+      { x: 80, y: 90, label: "POI Y", info: "POI Y info" },
     ],
   },
-  {
+    {
+    image: "/images/2012/LTU_Media_11451.jpg",
+    points: [
+      { x: 30, y: 20, label: "POI X", info: "POI X info" },
+      { x: 80, y: 90, label: "POI Y", info: "POI Y info" },
+    ],
+  },
+    {
     image: "/images/internet/DlqvQYDXoAEBkxX.jpg",
     points: [
       { x: 30, y: 20, label: "POI X", info: "POI X info" },
