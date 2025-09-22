@@ -2,29 +2,18 @@
 
 import React from "react";
 import Header from "../components/Header";
+import ModelViewer from "../components/modelViewer";
 
-export default function PlaceholderPage() {
+export default function ModelViewerPage() {
   return (
     <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
       <Header />
-      <main
-        style={{
-          flex: 1,
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          backgroundColor: "#f3f4f6", // Tailwind gray-100 equivalent
-        }}
-      >
-        <div style={{ textAlign: "center" }}>
-          <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>
-            🚧 Coming Soon 🚧
-          </h1>
-          <p style={{ fontSize: "1.125rem" }}>
-            This page is under construction. Please check back later.
-          </p>
-        </div>
-      </main>
+      <div style={{ flex: 1, position: "relative" }}>
+        <ModelViewer
+          objPath="/3DFiles/deanfromhelltester.obj"
+          //mtlPath="/3DFiles/testsplat.mtl"
+        />
+      </div>
     </div>
   );
 }

@@ -16,18 +16,29 @@ function Loader() {
   );
 }
 
-// Model
-function Model({ objPath, mtlPath }: { objPath: string; mtlPath: string }) {
-  const materials = useMemo(() => useLoader(MTLLoader, mtlPath), [mtlPath]);
-  materials.preload();
+// Model component
+interface ModelProps {
+  objPath: string;
+  mtlPath?: string; // optional
+}
 
-  const object = useMemo(
-    () =>
-      useLoader(OBJLoader, objPath, (loader) => {
+function Model({ objPath, mtlPath }: ModelProps) {
+  // Conditionally load materials
+  const materials = useMemo(() => {
+    if (!mtlPath) return null;
+    const loaded = useLoader(MTLLoader, mtlPath);
+    loaded.preload();
+    return loaded;
+  }, [mtlPath]);
+
+  // Load OBJ
+  const object = useMemo(() => {
+    return useLoader(OBJLoader, objPath, (loader) => {
+      if (materials) {
         (loader as unknown as OBJLoader).setMaterials(materials);
-      }),
-    [objPath, materials]
-  );
+      }
+    });
+  }, [objPath, materials]);
 
   return <primitive object={object} scale={0.5} />;
 }
@@ -35,7 +46,7 @@ function Model({ objPath, mtlPath }: { objPath: string; mtlPath: string }) {
 // Viewer props
 interface ModelViewerProps {
   objPath: string;
-  mtlPath: string;
+  mtlPath?: string;
 }
 
 export default function ModelViewer({ objPath, mtlPath }: ModelViewerProps) {
