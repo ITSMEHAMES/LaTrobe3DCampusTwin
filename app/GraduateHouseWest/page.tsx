@@ -1,11 +1,19 @@
-// app/page.tsx (Next.js 13+ with App Router)
-// or pages/index.tsx (Next.js 12 with Pages Router)
+"use client";
 
-export default function PlaceholderPage() {
+import React from "react";
+import Header from "../components/Header";
+import ModelViewer from "../components/modelViewer";
+
+export default function ModelViewerPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-800">
-      <h1 className="text-4xl font-bold mb-4">🚧 Coming Soon 🚧</h1>
-      <p className="text-lg">This page is under construction. Please check back later.</p>
-    </main>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <Header />
+      <div style={{ flex: 1, position: "relative" }}>
+        <ModelViewer
+          objPath="/3DFiles/deanfromhelltester.obj"
+          //mtlPath="/3DFiles/testsplat.mtl"
+        />
+      </div>
+    </div>
   );
 }
