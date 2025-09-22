@@ -1,11 +1,30 @@
-// app/page.tsx (Next.js 13+ with App Router)
-// or pages/index.tsx (Next.js 12 with Pages Router)
+"use client";
+
+import React from "react";
+import Header from "../components/Header";
 
 export default function PlaceholderPage() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-center bg-gray-100 text-gray-800">
-      <h1 className="text-4xl font-bold mb-4">🚧 Coming Soon 🚧</h1>
-      <p className="text-lg">This page is under construction. Please check back later.</p>
-    </main>
+    <div style={{ display: "flex", flexDirection: "column", height: "100vh" }}>
+      <Header />
+      <main
+        style={{
+          flex: 1,
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          backgroundColor: "#f3f4f6", // Tailwind gray-100 equivalent
+        }}
+      >
+        <div style={{ textAlign: "center" }}>
+          <h1 style={{ fontSize: "2rem", fontWeight: "bold", marginBottom: "1rem" }}>
+            🚧 Coming Soon 🚧
+          </h1>
+          <p style={{ fontSize: "1.125rem" }}>
+            This page is under construction. Please check back later.
+          </p>
+        </div>
+      </main>
+    </div>
   );
 }
