@@ -11,7 +11,6 @@ export default function ModelViewerPage() {
       <div style={{ flex: 1, position: "relative" }}>
         <ModelViewer
           objPath="/3DFiles/deanfromhelltester.obj"
-          //mtlPath="/3DFiles/testsplat.mtl"
         />
       </div>
     </div>
