@@ -28,6 +28,7 @@ const Sidebar: React.FC<SidebarProps> = ({ swapMap, currentMapIndex, totalMaps, 
         gap: "1rem",
         zIndex: 900,
         fontFamily: "Arial, Helvetica, sans-serif",
+        overflowY: "auto",
       }}
     >
       <h2 style={{ margin: 0, fontSize: "18px", color: "#e22333" }}>Interactive Tour</h2>

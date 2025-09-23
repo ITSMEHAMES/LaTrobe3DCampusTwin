@@ -12,7 +12,6 @@ export default function ModelViewerPage() {
         {/* ModelViewer will fill this container */}
         <ModelViewer
           objPath="/3DFiles/testsplat.obj"
-          mtlPath="/3DFiles/testsplat.mtl"
         />
       </div>
     </div>
