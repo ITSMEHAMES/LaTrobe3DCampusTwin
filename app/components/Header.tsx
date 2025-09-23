@@ -21,8 +21,8 @@ export default function Header() {
       }}
     >
       {/* Left side: Logo + Title */}
-      <div style={{ display: "flex", alignItems: "center", gap: "1rem" }}>
-        <img src="/Images/LaTrobeLogo.png" alt="Logo" width={120} height={60} />
+      <div style={{ display: "flex", alignItems: "center", gap: ".1rem" }}>
+        <img src="/Images/LaTrobeLogo.png" alt="Logo" width={180} height={60} />
         <h1
           style={{
             margin: 0,
@@ -30,7 +30,7 @@ export default function Header() {
             color: "white",
           }}
         >
-          La Trobe 3D Campus Viewer
+        3D Campus Viewer
         </h1>
       </div>
 
@@ -81,7 +81,7 @@ export default function Header() {
                 marginTop: "0.5rem",
                 background: "rgba(255, 255, 255, 0.85)", // semi-transparent white
                 border: "1px solid #ccc",
-                borderRadius: "8px",
+                borderRadius: "10px",
                 boxShadow: "0px 4px 6px rgba(0,0,0,0.1)",
                 display: "flex",
                 flexDirection: "column",
